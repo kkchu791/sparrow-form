@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { inputs } from './personalInfoInputs';
-import Field from '../Field/Field';
+import {Field} from '../Field';
 import { Button } from '../Button';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -60,13 +60,22 @@ export const PersonalInfoForm = () => {
     setShowMessage(true);
   }
 
+  const isShowing = (input) => {
+    if (input.conditional) {
+      const usersDOB = new Date(user[input.conditional.name]);
+      return input.conditional.show_if(usersDOB);
+    } else {
+      return true;
+    }
+  }
+
   const renderInput = (input) => {
     return (
       <div
         key={input.name}
         className={classes.formField}
       >
-        <Field input={input} handleChange={handleChange} user={user} />
+        {isShowing(input) && <Field input={input} handleChange={handleChange} user={user} />}
       </div>
     )
   }
@@ -89,7 +98,7 @@ export const PersonalInfoForm = () => {
           buttonText='Save'
           disabled={user.first_name === ''}
         />
-        {showMessage && <div className={classes.message}>Saved! Check you console.</div>}
+        {showMessage && <div className={classes.message}>Saved! Check your console.</div>}
       </div>
     </form>
   );

@@ -6,7 +6,6 @@ const useStyles = makeStyles({
   input: {
     background: 'white !important',
     border: '1px solid #ECECEC',
-    
     transition: 'none',
     '&:hover': {
       background: 'none',

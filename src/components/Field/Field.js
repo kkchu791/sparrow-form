@@ -1,7 +1,6 @@
 import React from 'react';
 import {BaseTextField} from './BaseTextField';
 import {CheckboxField} from './CheckboxField';
-import {withHiddenConditionalField} from './withHiddenConditionalField';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
 });
@@ -9,7 +8,7 @@ const useStyles = makeStyles({
 export const Field = ({
   input,
   handleChange,
-  user
+  user,
 }) => {
   const classes = useStyles();
 
@@ -28,4 +27,4 @@ export const Field = ({
   );
 }
 
-export default withHiddenConditionalField(Field);
+export default Field;

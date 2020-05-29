@@ -14,7 +14,9 @@ code {
 
 html {  
   height: 100vh;
+  min-height: 850px;
 }
+
 body, #root {
   height: 100%;
 }

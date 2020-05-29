@@ -8,12 +8,12 @@ export const inputs = [{
   "tag": "input",
   "name": "last_name",
   "type": "text",
-	"human_label": "Last Name"
+  "human_label": "Last Name",
 }, {
   "tag": "input",
   "name": "email",
   "type": "email",
-  "human_label": "Email Address"
+  "human_label": "Email Address",
 }, {
   "tag": "input",
   "name": "phone_number",
@@ -28,7 +28,7 @@ export const inputs = [{
   "tag": "input",
   "name": "date_of_birth",
   "type": "date",
-  "human_label": "Date of Birth"
+  "human_label": "Date of Birth",
 }, {
   "tag": "input",
   "name": "parental_consent",

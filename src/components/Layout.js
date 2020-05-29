@@ -19,8 +19,8 @@ export const Layout = ({
   children
 }) => {
   const showSideBar = useMediaQuery('(min-width:900px)');
-  const props = {width: showSideBar ? '60%' : '100%'};
-  const classes = useStyles(props);
+  const styleProps = {width: showSideBar ? '60%' : '100%'};
+  const classes = useStyles(styleProps);
 
   return (
     <div className={classes.layout}>
@@ -32,7 +32,6 @@ export const Layout = ({
           image={sidebarImage}
         />
       }
-      
     </div>
   );
 }

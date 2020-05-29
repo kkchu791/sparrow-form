@@ -3,8 +3,6 @@ import { LogoNav } from './LogoNav';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-  formLayout: {
-  },
 });
 
 export const FormLayout = ({
